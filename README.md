@@ -15,7 +15,7 @@ export XLINXD_LICENSE_FILE
 
 1. Create Virtual Envirnment
 Follow the Below Steps:
-  a. install python in your system
+  a. install python in your system.
   b. In terminal : python3 -m venv ~/virtualenv (This is folder name and ~/ allow to create envirnment in home directory)
   c. pip install jupyterlab
 
@@ -24,7 +24,12 @@ Follow the Below Steps:
   b. source ~/virtualenv/bin/activate
   c. jupyter lab
 
-3. Run the jupyter lab
+3. Run the jupyter lab.
+
+## Output
+1. output.csv file will generate in working directory. 
+2. Running_status file will inform which module has been executed.
+3. The Automation folder will be generated, containing a Vivado file.
   
  
   
