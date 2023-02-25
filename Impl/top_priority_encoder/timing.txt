@@ -1,0 +1,44 @@
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Sat Feb 25 18:14:18 2023
+| Host         : nanodcserver running 64-bit CentOS Linux release 7.4.1708 (Core)
+| Command      : report_timing
+| Design       : top_priority_encoder
+| Device       : 7a35t-cpg236
+| Speed File   : -1  PRODUCTION 1.22 2018-03-21
+------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack:                    inf
+  Source:                 a[6]
+                            (input port)
+  Destination:            valid
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.886ns  (logic 3.793ns (48.093%)  route 4.093ns (51.907%))
+  Logic Levels:           4  (IBUF=1 LUT3=1 LUT6=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    W13                                               0.000     0.000 r  a[6] (IN)
+                         net (fo=0)                   0.000     0.000    a[6]
+    W13                  IBUF (Prop_ibuf_I_O)         0.944     0.944 r  a_IBUF[6]_inst/O
+                         net (fo=4, routed)           1.599     2.543    a_IBUF[6]
+    SLICE_X0Y5           LUT6 (Prop_lut6_I4_O)        0.124     2.667 r  valid_OBUF_inst_i_2/O
+                         net (fo=1, routed)           0.646     3.313    valid_OBUF_inst_i_2_n_0
+    SLICE_X0Y6           LUT3 (Prop_lut3_I1_O)        0.124     3.437 r  valid_OBUF_inst_i_1/O
+                         net (fo=1, routed)           1.848     5.285    valid_OBUF
+    V17                  OBUF (Prop_obuf_I_O)         2.601     7.886 r  valid_OBUF_inst/O
+                         net (fo=0)                   0.000     7.886    valid
+    V17                                                               r  valid (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+
